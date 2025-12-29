@@ -74,9 +74,7 @@ npm run dev
 
 URL: `/admin/login`
 
-Kredensial default:
-- Email: admin@admin.com
-- Password: password
+
 
 ## Tech Stack
 
