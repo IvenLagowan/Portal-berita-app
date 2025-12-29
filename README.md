@@ -4,7 +4,7 @@ Aplikasi portal berita berbasis Laravel dengan fitur admin panel untuk manajemen
 
 ## Preview Aplikasi
 
-![Preview 1](public/images/preview/pv1.png)
+<img width="219" height="450" alt="image" src="https://github.com/user-attachments/assets/857d0a00-7ddf-4d2d-a9b6-1cbd4b5fff45" /> <br>
 ![Preview 2](public/images/preview/pv2.png)
 ![Preview 3](public/images/preview/pv3.png)
 
