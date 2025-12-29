@@ -10,7 +10,7 @@ class AboutController extends Controller
     {
         $team = [
             [
-                'name' => 'Miron Imabe',
+                'name' => 'DEMISON WONDA',
                 'position' => 'Ketua',
                 'image' => 'images/team/Ketua.jpg',
                 'description' => 'Massa Jabatan 2025/2026.'

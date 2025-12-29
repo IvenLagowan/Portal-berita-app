@@ -48,7 +48,7 @@ cp .env.example .env
 
 6. Generate application key
 ```bash
-php artisan key:generate
+portal
 ```
 
 7. Jalankan migrasi database dan seeder

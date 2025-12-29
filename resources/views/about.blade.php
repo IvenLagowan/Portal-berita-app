@@ -3,9 +3,9 @@
 @section('title', 'Tentang Kami - ' . config('app.name'))
 
 @section('content')
-<div class="bg-white">
+<div class="bg-primary">
     <!-- Hero Section dengan Parallax Effect -->
-    <div class="relative min-h-[500px] flex items-center bg-gradient-to-r from-[#85c226] to-[#b4e454] overflow-hidden">
+    <div class="relative min-h-[500px] flex items-center bg-gradient-to-r from-[#15bd77] to-[#383131] overflow-hidden">
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-repeat"></div>
         </div>
@@ -59,6 +59,28 @@
             </div>
         </div>
     </div>
+    <!-- STURUKTUR ORGANISASI -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Struktur Organisasi KMPPJ
+    </h2>
+    <p class="text-center mb-2">Struktur Organisasi Komunitas Mahasiswa dan Pelajar Puncak Jaya (KMPPJ) Kota Studi Jayapura disusun secara
+         sistematis dan hierarkis untuk menjamin efektivitas koordinasi, pelaksanaan program, serta pengambilan keputusan organisasi. 
+         Struktur ini terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, serta bidang-bidang kerja sesuai kebutuhan organisasi,
+          yang masing-masing memiliki tugas dan tanggung jawab jelas. Seluruh unsur dalam struktur organisasi bekerja secara kolektif dan 
+          berlandaskan prinsip kebersamaan, transparansi, dan tanggung jawab demi mewujudkan visi dan misi KMPPJ sebagai 
+        wadah pengembangan sumber daya mahasiswa dan pelajar asal Kabupaten Puncak Jaya di Kota Studi Jayapura, Papua.</p>
+        <br>
+    <div class="flex justify-center">
+        <div class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="images/sekeret/4.jpg"
+                 alt="Struktur Organisasi KMPPJ"
+                 onclick="openModal(this.src, this.alt)"
+                 class="max-w-full h-auto object-contain hover:scale-105 transition duration-300">
+        </div>
+    </div>
+</section>
+
 
     <!-- Vision & Mission dengan Card Design -->
     <div id="visi-misi" class="py-16 bg-white">
@@ -76,9 +98,7 @@
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-900 mb-6">Visi</h3>
                             <p class="text-gray-600 leading-relaxed text-lg">
-                                ASRAMA MAHASISWA PEMDA PUNCAK JAYA (AMPPJ)
-                                YAYASAN PUTRA PUTRI PUNCAK JAYA
-                                Alamat: Sekretariat lama pasar baru Youtefa asrama kunomek putra
+                            “Mewujudkan KMPPJ sebagai wadah persatuan, pembinaan, dan pengembangan potensi mahasiswa Puncak Jaya yang berintegritas, dan berdaya saing.”
                             </p>
                         </div>
                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
@@ -87,9 +107,9 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Misi</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6 ">Misi</h3>
                             <ul class="text-gray-600 space-y-4">
-                                @foreach(['PROGRAM KERJA BPP PENGURUS TAHUN 2024-2026', 'Setiap tahun kami akan adakan kegiatan Natal asrama satu tahun sekali', 'Setiap tahun kami akan adakan kegiatan perkenalan dalam satu tahun sekali', 'Setiap tahun akan adakan seminar'] as $item)
+                                @foreach(['PROGRAM KERJA BADAN PENGURUS TAHUN 2025-2026', 'Mendorong kaderisasi dan melatih kepemimpinan untuk menciptakan generasi muda Puncak Jaya yang aktif dan kritis.', 'Menjalin mitra kerja dengan organisasi tetangga sesuai AD/ART KMPPJ demi kemajuan bersama.'] as $item)
                                 <li class="flex items-center text-lg">
                                     <svg class="w-6 h-6 text-[#85c226] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -105,102 +125,244 @@
         </div>
     </div>
 
-    <!-- Milestones dengan Timeline Design -->
-    <div class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Perjalanan Kami</h2>
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#85c226] to-[#b4e454]"></div>
-                    
-                    <div class="space-y-16">
-                        @foreach($milestones as $index => $milestone)
-                        <div class="relative">
-                            <!-- Timeline Dot -->
-                            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#85c226] rounded-full border-4 border-white shadow-lg"></div>
-                            
-                            <!-- Content -->
-                            <div class="flex items-center justify-between">
-                                @if($index % 2 == 0)
-                                <!-- Konten Kiri -->
-                                <div class="w-5/12 text-right pr-8">
-                                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                                        <span class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#85c226] to-[#b4e454] text-white rounded-full text-lg font-semibold mb-4">
-                                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                                            </svg>
-                                            {{ $milestone['year'] }}
-                                        </span>
-                                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">{{ $milestone['title'] }}</h3>
-                                        <p class="text-gray-600 text-lg">{{ $milestone['description'] }}</p>
-                                    </div>
-                                </div>
-                                <div class="w-5/12"></div> <!-- Spacer untuk sisi kanan -->
-                                @else
-                                <!-- Konten Kanan -->
-                                <div class="w-5/12"></div> <!-- Spacer untuk sisi kiri -->
-                                <div class="w-5/12 text-left pl-8">
-                                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                                        <span class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#85c226] to-[#b4e454] text-white rounded-full text-lg font-semibold mb-4">
-                                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                                            </svg>
-                                            {{ $milestone['year'] }}
-                                        </span>
-                                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">{{ $milestone['title'] }}</h3>
-                                        <p class="text-gray-600 text-lg">{{ $milestone['description'] }}</p>
-                                    </div>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+
+  <!-- TUJUAN PORTAL -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">
+      TUJUAN PORTAL KMPPJ
+    </h2>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+      Portal KMPPJ Kota Studi Jayapura bertujuan sebagai media resmi informasi dan komunikasi organisasi yang berfungsi untuk menyampaikan seluruh aktivitas, program kerja, serta kebijakan Badan Pengurus KMPPJ secara transparan dan akuntabel. Portal ini menjadi sarana dokumentasi kegiatan, publikasi agenda organisasi, penguatan identitas kelembagaan, serta wadah interaksi dan partisipasi anggota dalam mendukung pengembangan potensi mahasiswa dan pelajar Puncak Jaya. Selain itu, portal KMPPJ diharapkan mampu meningkatkan citra positif organisasi, memperluas jaringan kemitraan, serta menjadi pusat informasi yang mudah diakses oleh anggota, alumni, dan masyarakat luas.
+    </p>
+  </div>
+
+  <!-- TUJUAN VISI -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-green-600 mb-6">
+      TUJUAN VISI KMPPJ
+    </h2>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+      Tujuan visi KMPPJ adalah membentuk organisasi mahasiswa yang solid, bersatu, dan berintegritas sebagai rumah besar mahasiswa dan pelajar Puncak Jaya di Kota Studi Jayapura. Visi ini diarahkan untuk menciptakan sumber daya manusia yang unggul, berdaya saing, serta memiliki karakter kepemimpinan yang mampu berkontribusi secara nyata bagi daerah, bangsa, dan gereja. KMPPJ diharapkan menjadi wadah pembinaan yang berkelanjutan dalam pengembangan intelektual, moral, sosial, dan spiritual anggotanya.
+    </p>
+  </div>
+
+  <!-- TUJUAN MISI -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-purple-600 mb-8">
+      TUJUAN MISI KMPPJ
+    </h2>
+
+    <div class="space-y-6">
+
+      <!-- MISI 1 -->
+      <div class="border-l-4 border-purple-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          1. Penguatan Kaderisasi dan Kepemimpinan
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Misi ini bertujuan membentuk kader-kader KMPPJ yang memiliki jiwa kepemimpinan, wawasan kebangsaan, serta kemampuan berpikir kritis dan solutif. Melalui pelatihan, diskusi, dan pembinaan berkelanjutan, KMPPJ menyiapkan generasi muda Puncak Jaya yang aktif berorganisasi, berani menyampaikan aspirasi, dan siap menjadi agen perubahan di lingkungan kampus maupun masyarakat.
+        </p>
+      </div>
+
+      <!-- MISI 2 -->
+      <div class="border-l-4 border-purple-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          2. Pengembangan Jejaring dan Kemitraan
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          Misi ini bertujuan membangun hubungan kerja sama yang harmonis dan saling menguatkan dengan organisasi mahasiswa lain, lembaga kemasyarakatan, pemerintah, dan mitra strategis sesuai AD/ART KMPPJ. Kemitraan ini diarahkan untuk meningkatkan kapasitas organisasi, memperluas ruang gerak program kerja, serta mendorong kolaborasi positif demi kemajuan bersama dan kesejahteraan mahasiswa Puncak Jaya.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <section
+    class="relative py-24 bg-cover bg-center"
+    style="background-image: url('images/bg-kmppj.jpg');">
+
+    <!-- Overlay Gradient Luar -->
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/90 via-black/80 to-black/95">
     </div>
 
-    <!-- Team Section dengan Card Hover Effects -->
-    <div class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Badan Pengurus Asrama Putra Kinaonak</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    @foreach($team as $member)
-                    <div class="group">
-                        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform group-hover:-translate-y-2">
-                            <div class="relative w-48 h-48 mx-auto mb-6">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#85c226] to-[#b4e454] rounded-full opacity-10 group-hover:opacity-20 transition duration-300"></div>
-                                <img src="{{ asset('images/team/Sek.jpg') }}" 
-                                     alt="{{ $member['name'] }}" 
-                                     class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ $member['name'] }}</h3>
-                            <p class="text-[#85c226] font-medium mb-3">{{ $member['position'] }}</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">{{ $member['description'] }}</p>
-                            <div class="mt-4 pt-4 border-t border-gray-100">
-                                <div class="flex justify-center space-x-4">
-                                    <a href="#" class="text-gray-400 hover:text-[#85c226] transition duration-300">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-[#85c226] transition duration-300">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+    <!-- Shadow Frame -->
+    <div class="relative max-w-7xl mx-auto px-4">
+
+        <!-- Heading -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-wide">
+                BADAN PENGURUS KMPPJ
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-[#c20430] to-black mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-300 mt-5 text-lg">
+                Kota Studi Jayapura – Papua
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+
+            <!-- Card -->
+            <div class="group relative rounded-2xl overflow-hidden
+                        shadow-[0_25px_60px_rgba(0,0,0,0.8)]
+                        hover:shadow-red-900/40 transition duration-500">
+
+                <img src="images/team1/ketua.jpeg"
+                     alt="Ketua KMPPJ"
+                     class="w-full h-80 object-cover
+                            group-hover:scale-110 transition duration-700 ease-out">
+
+                <!-- Overlay Card -->
+                <div class="absolute inset-0 bg-gradient-to-t
+                            from-black/90 via-black/50 to-transparent
+                            opacity-0 group-hover:opacity-100 transition duration-500">
+                </div>
+
+                <!-- Text -->
+                <div class="absolute bottom-0 w-full p-6 text-center
+                            translate-y-6 group-hover:translate-y-0
+                            transition duration-500">
+                    <h3 class="text-xl font-semibold text-white">
+                        Demison Wonda
+                    </h3>
+                    <p class="text-sm text-[#c20430] mt-1 tracking-wide">
+                        Ketua Umum KMPPJ
+                    </p>
                 </div>
             </div>
+
+            <!-- Duplikat card (tinggal ganti data) -->
+            <!-- Wakil -->
+            <div class="group relative rounded-2xl overflow-hidden
+                        shadow-[0_25px_60px_rgba(0,0,0,0.8)]
+                        hover:shadow-red-900/40 transition duration-500">
+
+                <img src="images/team1/wakil.jpeg"
+                     alt="Wakil Ketua KMPPJ"
+                     class="w-full h-80 object-cover
+                            group-hover:scale-110 transition duration-700 ease-out">
+
+                <div class="absolute inset-0 bg-gradient-to-t
+                            from-black/90 via-black/50 to-transparent
+                            opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                <div class="absolute bottom-0 w-full p-6 text-center
+                            translate-y-6 group-hover:translate-y-0
+                            transition duration-500">
+                    <h3 class="text-xl font-semibold text-white">
+                        Yani Wanimbo
+                    </h3>
+                    <p class="text-sm text-[#c20430] mt-1 tracking-wide">
+                        Wakil Ketua KMPPJ
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sekretaris -->
+            <div class="group relative rounded-2xl overflow-hidden
+                        shadow-[0_25px_60px_rgba(0,0,0,0.8)]
+                        hover:shadow-red-900/40 transition duration-500">
+
+                <img src="images/team1/sek.jpg"
+                     alt="Sekretaris KMPPJ"
+                     class="w-full h-80 object-cover
+                            group-hover:scale-110 transition duration-700 ease-out">
+
+                <div class="absolute inset-0 bg-gradient-to-t
+                            from-black/90 via-black/50 to-transparent
+                            opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                <div class="absolute bottom-0 w-full p-6 text-center
+                            translate-y-6 group-hover:translate-y-0
+                            transition duration-500">
+                    <h3 class="text-xl font-semibold text-white">
+                        Siron Telenggen
+                    </h3>
+                    <p class="text-sm text-[#c20430] mt-1 tracking-wide">
+                        Sekretaris I KMPPJ
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bendahara -->
+            <div class="group relative rounded-2xl overflow-hidden
+                        shadow-[0_25px_60px_rgba(0,0,0,0.8)]
+                        hover:shadow-red-900/40 transition duration-500">
+
+                <img src="images/sekeret/5.jpg"
+                     alt="Bendahara KMPPJ"
+                     class="w-full h-80 object-cover
+                            group-hover:scale-110 transition duration-700 ease-out">
+
+                <div class="absolute inset-0 bg-gradient-to-t
+                            from-black/90 via-black/50 to-transparent
+                            opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                <div class="absolute bottom-0 w-full p-6 text-center
+                            translate-y-6 group-hover:translate-y-0
+                            transition duration-500">
+                    <h3 class="text-xl font-semibold text-white">
+                        Nama Bendahara
+                    </h3>
+                    <p class="text-sm text-[#c20430] mt-1 tracking-wide">
+                        Bendahara
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
+
+
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center mb-10">
+        SEKERETARIAT KMPPJ - KOTA STUDI JAYAPURA
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/1.jpg"
+                 alt="Rapat internal pengurus KMPPJ dalam rangka evaluasi dan perencanaan program kerja."
+                 data-deskripsi="Gedung Sekretariat KMPPJ Kota Studi Jayapura sebagai pusat administrasi dan koordinasi organisasi."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+                 
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/2.jpg"
+                 alt="Kegiatan Rapat"
+                 data-deskripsi=""
+                 onclick="openModal(this)"
+        
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/3.jpg"
+                 alt="Aktivitas Sekretariat"
+                 data-deskripsi="Aktivitas harian pengurus KMPPJ dalam pelayanan dan pengelolaan administrasi."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/5.jpg"
+                 alt="Dokumentasi KMPPJ"
+                 data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+    </div>
+</section>
+
+
 
     <!-- Contact Section dengan Interactive Elements -->
     <div id="contact" class="py-16 bg-white">
@@ -227,7 +389,7 @@
                             </svg>
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Email</h3>
-                        <p class="text-gray-600 text-center">kinaonak@gmail.com</p>
+                        <p class="text-gray-600 text-center">kmppj@gmail.com</p>
                         <a href="mailto:info@portalberita.com" class="mt-4 block text-center text-sm text-[#85c226] hover:text-[#b4e454] transition duration-300">
                             Kirim Email
                         </a>
@@ -240,7 +402,7 @@
                             </svg>
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">Alamat</h3>
-                        <p class="text-gray-600 text-center">Jl. Media Raya No. 123<br> Provinsi Papua</p>
+                        <p class="text-gray-600 text-center">Jl. Pasar Baru Joutefa<br> Provinsi Papua</p>
                         <a href="https://maps.app.goo.gl/VXz9XeMjWmenqjTeA" target="_blank" class="mt-4 block text-center text-sm text-[#85c226] hover:text-[#b4e454] transition duration-300">
                             Lihat di Peta
                         </a>
