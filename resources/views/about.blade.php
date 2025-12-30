@@ -239,7 +239,7 @@
                         shadow-[0_25px_60px_rgba(0,0,0,0.8)]
                         hover:shadow-red-900/40 transition duration-500">
 
-                <img src="images/team1/wakil.jpeg"
+                <img src="images/team1/sekertaris.jpeg"
                      alt="Wakil Ketua KMPPJ"
                      class="w-full h-80 object-cover
                             group-hover:scale-110 transition duration-700 ease-out">
@@ -252,10 +252,10 @@
                             translate-y-6 group-hover:translate-y-0
                             transition duration-500">
                     <h3 class="text-xl font-semibold text-white">
-                        Yani Wanimbo
+                        Diron Wonda
                     </h3>
                     <p class="text-sm text-[#c20430] mt-1 tracking-wide">
-                        Wakil Ketua KMPPJ
+                        Sekretaris Umum KMPPJ
                     </p>
                 </div>
             </div>
@@ -265,7 +265,7 @@
                         shadow-[0_25px_60px_rgba(0,0,0,0.8)]
                         hover:shadow-red-900/40 transition duration-500">
 
-                <img src="images/team1/sek.jpg"
+                <img src="images/team1/bendehara.jpeg"
                      alt="Sekretaris KMPPJ"
                      class="w-full h-80 object-cover
                             group-hover:scale-110 transition duration-700 ease-out">
@@ -278,7 +278,7 @@
                             translate-y-6 group-hover:translate-y-0
                             transition duration-500">
                     <h3 class="text-xl font-semibold text-white">
-                        Siron Telenggen
+                        Yunita.I Telenggen
                     </h3>
                     <p class="text-sm text-[#c20430] mt-1 tracking-wide">
                         Sekretaris I KMPPJ
@@ -290,9 +290,8 @@
             <div class="group relative rounded-2xl overflow-hidden
                         shadow-[0_25px_60px_rgba(0,0,0,0.8)]
                         hover:shadow-red-900/40 transition duration-500">
-
-                <img src="images/sekeret/5.jpg"
-                     alt="Bendahara KMPPJ"
+         <img src="images/team1/humas.jpeg"
+                     alt="Ikari Wonda"
                      class="w-full h-80 object-cover
                             group-hover:scale-110 transition duration-700 ease-out">
 
@@ -304,10 +303,10 @@
                             translate-y-6 group-hover:translate-y-0
                             transition duration-500">
                     <h3 class="text-xl font-semibold text-white">
-                        Nama Bendahara
+                        Ikari Wonda
                     </h3>
                     <p class="text-sm text-[#c20430] mt-1 tracking-wide">
-                        Bendahara
+                        Umas & Kemitraan
                     </p>
                 </div>
             </div>
@@ -353,6 +352,38 @@
 
         <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
             <img src="images/sekeret/5.jpg"
+                 alt="Dokumentasi KMPPJ"
+                 data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/d.jpg"
+                 alt="Dokumentasi KMPPJ"
+                 data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/c.jpg"
+                 alt="Dokumentasi KMPPJ"
+                 data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/b.jpg"
+                 alt="Dokumentasi KMPPJ"
+                 data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
+                 onclick="openModal(this)"
+                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+
+        <div class="group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/sekeret/a.jpg"
                  alt="Dokumentasi KMPPJ"
                  data-deskripsi="Dokumentasi kegiatan kebersamaan dan pelayanan mahasiswa KMPPJ."
                  onclick="openModal(this)"

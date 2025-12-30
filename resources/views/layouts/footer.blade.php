@@ -100,7 +100,7 @@
                     Contact Info
                 </h3>
                 <div class="space-y-3 text-gray-400">
-                    <p>📧 kinaonak@gmail.com</p>
+                    <p>📧 kmppj@gmail.com</p>
                     <p>📞 +62 852 5422 1251</p>
                 </div>
             </div>
